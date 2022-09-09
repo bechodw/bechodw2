@@ -1,0 +1,8 @@
+.Login{
+    width: 100% !important;
+    height: 1000px;
+}
+body{
+    background: #72FFFF;
+    background: linear-gradient(to right, #5800FF,#72FFFF);
+}
