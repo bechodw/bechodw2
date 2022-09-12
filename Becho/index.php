@@ -47,7 +47,7 @@
                         <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
                     </div>
                     <div class="my-3">
-                        <span>Olvidaste tu contraseña?<br> <a href="#">Recuperar contraseña</a></span>
+                        <span>Olvidaste tu contraseña?<br> <a href="Recuperacion_Contraseña.php">Recuperar contraseña</a></span>
                     </div>
                     <div class="my-3">
                         <span>No tienes cuenta?<br> <a href="Registro.php">Registrarse</a></span>

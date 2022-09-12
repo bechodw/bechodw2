@@ -23,10 +23,10 @@
         
         $model->persona=intval($filaController[0]);
         $file2=$model->Rusuario();
-        //header("refresh:1;url=http://localhost/Becho/");
+        header("refresh:1;url=http://localhost/Becho/");
     }else{
         echo "Error en correo o usuario";
-        //header("refresh:2;url=http://localhost/Becho/Registro.php");
+        header("refresh:2;url=http://localhost/Becho/Registro.php");
     }
 
 ?>
