@@ -30,7 +30,7 @@
                 </div>
                 <h2 class="fw-bold text-center py-5">Bienvenido</h2>
                 <!--Login-->
-                <form method="POST" action="ControllerInicio.php">
+                <form method="POST" action="Controlador/ControllerInicio.php">
                     <div class="mb-4">
                         <label for="email" class="form-label">Usuario</label>
                         <input type="email" class="form-control" name="Usuario" placeholder="INGRESE CORREO DE USUARIO">
@@ -47,10 +47,10 @@
                         <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
                     </div>
                     <div class="my-3">
-                        <span>Olvidaste tu contraseña?<br> <a href="Recuperacion_Contraseña.php">Recuperar contraseña</a></span>
+                        <span>Olvidaste tu contraseña?<br> <a href="Vista/Recuperacion_Contraseña.php">Recuperar contraseña</a></span>
                     </div>
                     <div class="my-3">
-                        <span>No tienes cuenta?<br> <a href="Registro.php">Registrarse</a></span>
+                        <span>No tienes cuenta?<br> <a href="Vista/Registro.php">Registrarse</a></span>
                     </div>
                 </form>
 

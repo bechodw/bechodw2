@@ -18,38 +18,42 @@
     </style>
 </head>
 <body>
-  <div class="container w-75 bg-white mt-5 rounded-5 shadow">
+    <div class="container w-75 bg-white mt-5 rounded-5 shadow">
         <div class="row align-items-stretch">
             <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded-5">
-
             </div>
             <div class="col bg-white p-5 rounded-end">
+
                 <div class="text-end">
                     <img src="Img/logo4.jfif" width="100px" alt="">
                 </div>
                 <h2 class="fw-bold text-center py-5">REGISTRO</h2>
 
-                <form method="POST" action="controllerRegistro.php">
+                <form method="POST" action="../Controlador/controllerRegistro.php">
+
                     <div class="mb-4">
                         <label for="Nombres" class="form-label">NOMBRES</label>
                         <input class="form-control" name="Nombres" type="text" id="Nombres" placeholder="Escribe tus Nombres">
                     </div>
+
                     <div class="mb-4">
                         <br><label for="Apellidos" class="form-label">APELLIDOS</label>
                         <input class="form-control" name="Apellidos" type="text" id="Apellidos" placeholder="Escribe tus Apellidos">
                     </div>
+
                     <div class="mb-4">
                         <br><label for="DPI" class="form-label">DPI</label>
                         <input class="form-control" name="DPI" type="text" id="DPI" placeholder="Escribe tu DPI">
                     </div>
+
                     <div class="mb-4">
                         <br><label for="Direccion" class="form-label">Direccion</label>
                         <input class="form-control" name="Direccion" type="text" id="Direccion" placeholder="Escribe tu Direccion">
                     </div>
+
                     <div class="mb-4">
                         <fieldset>
                             <legend>COMO TE IDENTIFICAS</legend>
-
                             <div>
                             <input type="radio" id="Demandado" name="Tipo" value="1"checked>
                             <label for="huey">DEMANDADO</label>
@@ -60,21 +64,22 @@
                             </div>
                         </fieldset>
                     </div>
+                    
                     <div class="mb-4">
                         <br><label for="Correo" class="form-label">Correo</label>
                         <input class="form-control" name="Email" type="email" id="Correo" placeholder="Escribe tu Correo">
                     </div>
+
                     <div class="mb-4">
                         <br><label for="Contraseña" class="form-label">Contraseña</label>
                         <input class="form-control" name="Contraseña" type="password" id="Contraseña" placeholder="Escribe tu Direccion">
                     </div>
-                    
+
                     <div class="d-grid">
                         <button type="submit" class="btn btn-primary">REGISTRAR</button>
                     </div>
                     
                 </form>
-
             </div>
         </div>
     </div>

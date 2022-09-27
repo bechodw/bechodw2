@@ -1,86 +1,5 @@
-USE [master]
-GO
-/****** Object:  Database [FJuridica]    Script Date: 8/09/2022 19:58:55 ******/
-CREATE DATABASE [FJuridica]
- CONTAINMENT = NONE
- ON  PRIMARY 
-( NAME = N'FJuridica', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\FJuridica.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
- LOG ON 
-( NAME = N'FJuridica_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.SQLEXPRESS\MSSQL\DATA\FJuridica_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
- WITH CATALOG_COLLATION = DATABASE_DEFAULT
-GO
-ALTER DATABASE [FJuridica] SET COMPATIBILITY_LEVEL = 150
-GO
-IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
-begin
-EXEC [FJuridica].[dbo].[sp_fulltext_database] @action = 'enable'
-end
-GO
-ALTER DATABASE [FJuridica] SET ANSI_NULL_DEFAULT OFF 
-GO
-ALTER DATABASE [FJuridica] SET ANSI_NULLS OFF 
-GO
-ALTER DATABASE [FJuridica] SET ANSI_PADDING OFF 
-GO
-ALTER DATABASE [FJuridica] SET ANSI_WARNINGS OFF 
-GO
-ALTER DATABASE [FJuridica] SET ARITHABORT OFF 
-GO
-ALTER DATABASE [FJuridica] SET AUTO_CLOSE ON 
-GO
-ALTER DATABASE [FJuridica] SET AUTO_SHRINK OFF 
-GO
-ALTER DATABASE [FJuridica] SET AUTO_UPDATE_STATISTICS ON 
-GO
-ALTER DATABASE [FJuridica] SET CURSOR_CLOSE_ON_COMMIT OFF 
-GO
-ALTER DATABASE [FJuridica] SET CURSOR_DEFAULT  GLOBAL 
-GO
-ALTER DATABASE [FJuridica] SET CONCAT_NULL_YIELDS_NULL OFF 
-GO
-ALTER DATABASE [FJuridica] SET NUMERIC_ROUNDABORT OFF 
-GO
-ALTER DATABASE [FJuridica] SET QUOTED_IDENTIFIER OFF 
-GO
-ALTER DATABASE [FJuridica] SET RECURSIVE_TRIGGERS OFF 
-GO
-ALTER DATABASE [FJuridica] SET  ENABLE_BROKER 
-GO
-ALTER DATABASE [FJuridica] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
-GO
-ALTER DATABASE [FJuridica] SET DATE_CORRELATION_OPTIMIZATION OFF 
-GO
-ALTER DATABASE [FJuridica] SET TRUSTWORTHY OFF 
-GO
-ALTER DATABASE [FJuridica] SET ALLOW_SNAPSHOT_ISOLATION OFF 
-GO
-ALTER DATABASE [FJuridica] SET PARAMETERIZATION SIMPLE 
-GO
-ALTER DATABASE [FJuridica] SET READ_COMMITTED_SNAPSHOT OFF 
-GO
-ALTER DATABASE [FJuridica] SET HONOR_BROKER_PRIORITY OFF 
-GO
-ALTER DATABASE [FJuridica] SET RECOVERY SIMPLE 
-GO
-ALTER DATABASE [FJuridica] SET  MULTI_USER 
-GO
-ALTER DATABASE [FJuridica] SET PAGE_VERIFY CHECKSUM  
-GO
-ALTER DATABASE [FJuridica] SET DB_CHAINING OFF 
-GO
-ALTER DATABASE [FJuridica] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
-GO
-ALTER DATABASE [FJuridica] SET TARGET_RECOVERY_TIME = 60 SECONDS 
-GO
-ALTER DATABASE [FJuridica] SET DELAYED_DURABILITY = DISABLED 
-GO
-ALTER DATABASE [FJuridica] SET ACCELERATED_DATABASE_RECOVERY = OFF  
-GO
-ALTER DATABASE [FJuridica] SET QUERY_STORE = OFF
-GO
-USE [FJuridica]
-GO
-/****** Object:  User [becho]    Script Date: 8/09/2022 19:58:55 ******/
+CREATE DATABASE FJuridica;
+USE FJuridica;
 CREATE USER [becho] FOR LOGIN [becho] WITH DEFAULT_SCHEMA=[dbo]
 GO
 ALTER ROLE [db_owner] ADD MEMBER [becho]
@@ -265,7 +184,7 @@ CREATE TABLE [dbo].[Usuario](
 	[Id_tipoUsuario] [int] NOT NULL,
 	[Id_persona] [int] NOT NULL,
 	[Correo] [varchar](150) NOT NULL,
-	[ContraseÃ±a] [varchar](150) NOT NULL,
+	[Contraseña] [varchar](150) NOT NULL,
  CONSTRAINT [PK_Usuario] PRIMARY KEY CLUSTERED 
 (
 	[Id_Usuario] ASC
@@ -360,15 +279,15 @@ SET IDENTITY_INSERT [dbo].[Tipo_Usuario] OFF
 GO
 SET IDENTITY_INSERT [dbo].[Usuario] ON 
 GO
-INSERT [dbo].[Usuario] ([Id_Usuario], [Id_tipoUsuario], [Id_persona], [Correo], [ContraseÃ±a]) VALUES (1, 3, 1, N'KARENR@gmail.com', N'karen1415')
+INSERT [dbo].[Usuario] ([Id_Usuario], [Id_tipoUsuario], [Id_persona], [Correo], [Contraseña]) VALUES (1, 3, 1, N'KARENR@gmail.com', N'karen1415')
 GO
-INSERT [dbo].[Usuario] ([Id_Usuario], [Id_tipoUsuario], [Id_persona], [Correo], [ContraseÃ±a]) VALUES (2, 1, 2, N'joelRAMIREZ@gmail.com', N'Gerson123')
+INSERT [dbo].[Usuario] ([Id_Usuario], [Id_tipoUsuario], [Id_persona], [Correo], [Contraseña]) VALUES (2, 1, 2, N'joelRAMIREZ@gmail.com', N'Gerson123')
 GO
-INSERT [dbo].[Usuario] ([Id_Usuario], [Id_tipoUsuario], [Id_persona], [Correo], [ContraseÃ±a]) VALUES (3, 2, 3, N'ShaunyG@gmail.com', N'Shauny1333')
+INSERT [dbo].[Usuario] ([Id_Usuario], [Id_tipoUsuario], [Id_persona], [Correo], [Contraseña]) VALUES (3, 2, 3, N'ShaunyG@gmail.com', N'Shauny1333')
 GO
-INSERT [dbo].[Usuario] ([Id_Usuario], [Id_tipoUsuario], [Id_persona], [Correo], [ContraseÃ±a]) VALUES (10, 1, 24, N'GeoG@gmail.com', N'123456')
+INSERT [dbo].[Usuario] ([Id_Usuario], [Id_tipoUsuario], [Id_persona], [Correo], [Contraseña]) VALUES (10, 1, 24, N'GeoG@gmail.com', N'123456')
 GO
-INSERT [dbo].[Usuario] ([Id_Usuario], [Id_tipoUsuario], [Id_persona], [Correo], [ContraseÃ±a]) VALUES (11, 1, 59, N'SharonP@gmail.com', N'AS123456')
+INSERT [dbo].[Usuario] ([Id_Usuario], [Id_tipoUsuario], [Id_persona], [Correo], [Contraseña]) VALUES (11, 1, 59, N'SharonP@gmail.com', N'AS123456')
 GO
 SET IDENTITY_INSERT [dbo].[Usuario] OFF
 GO

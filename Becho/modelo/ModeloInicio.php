@@ -40,6 +40,32 @@
                 echo "Error en la conexion ->".$e;
             }
         }
+
+        function usuario(){
+            $host='localhost';
+            $dbname='FJuridica';
+            $username='becho';
+            $pasword='becho1';
+            $puerto=1433;
+            $cadenaCnx="sqlsrv:Server=$host,$puerto;Database=$dbname";
+            $Cnx=new PDO ($cadenaCnx,$username,$pasword);
+            try{
+                $consulta=$Cnx->prepare("SELECT Nombres,Apellidos FROM Persona WHERE 
+                Id_persona=:parametro1" );
+                
+                $consulta->bindValue(":parametro1",$this->id);
+                
+
+                $consulta->execute();
+
+                $filaModel=$consulta->fetch();
+
+                return $filaModel;
+
+            }catch(PDOException $e){
+                echo "Error en la conexion ->".$e;
+            }
+        }
     }
 
 ?>

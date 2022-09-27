@@ -29,7 +29,7 @@
                 </div>
                 <h2 class="fw-bold text-center py-5">RECUPERAR CONTRASEÑA</h2>
 
-                <form method="POST" action="controllerRecuperacion.php">
+                <form method="POST" action="../Controlador/controllerRecuperacion.php">
                     <div class="mb-4">
                         <br><label for="Correo" class="form-label">Correo</label>
                         <input class="form-control" name="Email" type="email" id="Correo" placeholder="Escribe tu Correo">

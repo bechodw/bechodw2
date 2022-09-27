@@ -1,5 +1,5 @@
 <?php
-    require_once 'ModeloRecuperacion.php';
+    require_once '../modelo/ModeloRecuperacion.php';
     
     $model=new Model();
 /*
@@ -11,7 +11,7 @@
     $model->Clave=$_POST['Contraseña'];
     $filaController=$model->Recuperar();
     if($filaController>0){
-        header("refresh:1;url=http://localhost/Becho/");
+        header("refresh:1;url=http://localhost/Becho/Login.php");
     }else{
         echo "Error en correo o usuario";
         header("refresh:2;url=http://localhost/Becho/Recuperacion_Contraseña.php");

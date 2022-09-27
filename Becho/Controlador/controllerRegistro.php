@@ -1,5 +1,5 @@
 <?php
-    require_once 'ModeloRegistro.php';
+    require_once '../modelo/ModeloRegistro.php';
     
     $model=new Model();
 /*
@@ -23,7 +23,7 @@
         
         $model->persona=intval($filaController[0]);
         $file2=$model->Rusuario();
-        header("refresh:1;url=http://localhost/Becho/");
+        header("refresh:1;url=http://localhost/Becho/Login.php");
     }else{
         echo "Error en correo o usuario";
         header("refresh:2;url=http://localhost/Becho/Registro.php");

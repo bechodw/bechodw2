@@ -1,0 +1,30 @@
+p.nosotros{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
+    font-size: larger;
+}
+p.historia{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
+    font-size: larger;
+}
+p.mv{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
+    font-size: larger;
+}
+.div-1{
+    background-color: #AAC4FF;
+    padding-top: 50px;
+}
+.div-2{
+    background-color: #8758FF;
+    padding-top: 50px;
+}
+.div-3{
+    background-color: #D2DAFF;
+    padding-top: 50px;
+}
+body{
+    background-color: #0096FF;
+}
